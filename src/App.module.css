@@ -1,0 +1,35 @@
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    /* background: #97cfce; */
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./images/dark_tint.png),url(./images/01.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.header {
+    margin: 30px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 100%;
+}
+
+@media (max-width:1000px) {
+    .main {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

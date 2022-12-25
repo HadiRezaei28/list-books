@@ -11,19 +11,19 @@ const Export = () => {
                         <th>Remove</th>
                         <th>Author</th>
                         <th>Title</th>
-                        <th>Number#</th>
+                        <th>Number #</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><BsTrash /></td>
+                        <td className={styles.remove}><BsTrash /></td>
                         <td>hadi</td>
                         <td>last dance</td>
                         <td>01</td>
                     </tr>
                 </tbody>
             </table>
-            <button>Remove All</button>
+            <button className={styles.trashbtn}>Remove All</button>
         </div>
     );
 };

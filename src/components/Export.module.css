@@ -1,0 +1,100 @@
+.container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #5ba8a7;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 20px 0;
+    color: #000000;
+}
+
+thead {
+    border-bottom: 1px solid black;
+
+}
+
+td {
+    width: 100px;
+    font-size: 15px;
+    height: 40px;
+}
+
+th {
+    width: 100px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.remove {
+    color: rgb(207, 56, 56);
+    cursor: pointer;
+}
+
+.trashbtn {
+    margin-bottom: 20px;
+    width: 82%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: rgb(207, 56, 56);
+    color: aliceblue;
+    transition: all 0.4s ease-in-out;
+}
+
+.trashbtn:hover {
+    background: rgb(134, 24, 24);;
+}
+
+
+@media (max-width:1000px) {
+    .container {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width:515px) {
+    .container {
+        margin-bottom: 50px;
+        width: 300px;
+    }
+
+    td {
+        width: 60px;
+        font-size: 12px;
+    }
+    
+    th {
+        width: 60px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:320px) {
+    .container {
+        margin-bottom: 50px;
+        width: 200px;
+    }
+
+    td {
+        width: 40px;
+        font-size: 8px;
+    }
+    
+    th {
+        width: 40px;
+        font-size: 8px;
+    }
+
+    .trashbtn {
+        font-size: 10px;
+    }
+}

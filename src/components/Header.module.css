@@ -1,0 +1,20 @@
+.h1 {
+    font-size: 40px;
+    color:rgb(247, 197, 179);
+}
+
+.h4 {
+    font-size: 20px;
+    color:rgb(250, 221, 210);
+}
+
+@media (max-width:320px) {
+
+    .h1{
+        font-size: 25px;
+    }
+
+    .h4 {
+        font-size: 14px;
+    }
+}
