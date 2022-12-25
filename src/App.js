@@ -39,13 +39,25 @@ function App() {
   const changeHandler = (e) => {
     setData({ ...data, [e.target.name]: e.target.value })
   }
+
+  const oneRemove = (number) => {
+      const filterBooks = informations.filter(item => {
+        return item.number !== number
+      })
+      setInformations(filterBooks)
+  }
+
+  const allRemove = () => {
+    setInformations([])
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <Header />
       </div>
       <div className={styles.main}>
-        <Export informations={informations} />
+        <Export informations={informations} oneRemove={oneRemove} allRemove={allRemove}/>
         <Import data={data} informations={informations} clickHandler={clickHandler} changeHandler={changeHandler} />
       </div>
     </div>
