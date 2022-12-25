@@ -54,6 +54,16 @@ th {
     background: rgb(134, 24, 24);;
 }
 
+.warning {
+    margin-bottom: 50px;
+    color: rgb(143, 22, 22);
+}
+
+.svgwarning {
+    font-size: 30px;
+    color: rgb(143, 22, 22);
+}
+
 
 @media (max-width:1000px) {
     .container {

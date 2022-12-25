@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from "./Export.module.css";
 import { BsTrash } from "react-icons/bs";
+import { MdPrivacyTip } from "react-icons/md";
 
-const Export = () => {
+const Export = ({ informations }) => {
+
     return (
         <div className={styles.container}>
             <table>
@@ -15,15 +17,25 @@ const Export = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td className={styles.remove}><BsTrash /></td>
-                        <td>hadi</td>
-                        <td>last dance</td>
-                        <td>01</td>
-                    </tr>
+                    {
+                        informations.map((information) => {
+                            return (
+                                <tr key={information.number}>
+                                    <td className={styles.remove}><BsTrash /></td>
+                                    <td>{information.author}</td>
+                                    <td>{information.title}</td>
+                                    <td>{information.number}</td>
+                                </tr>)
+                        })
+                    }
                 </tbody>
             </table>
-            <button className={styles.trashbtn}>Remove All</button>
+            
+            {
+                informations.length < 1 ?
+                <><span className={styles.svgwarning}>< MdPrivacyTip /></span><p className={styles.warning}>not found any book</p></> : 
+                <button className={styles.trashbtn}>Remove All</button>
+            }
         </div>
     );
 };
